@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/fa/font-awesome.min.css') }}"/>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/menu.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <body>
+    <header>
+        <div class="logo">
+            <a href="HomePage.php"><img class="logoimg" src="{{ asset('images/school_icon.png') }}" alt="icon"></a>
+            <label class="laundryname"><a href="HomePage.php">SYMFONY HIGH SCHOOL</a></label>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./HomePage.php"><i class="fa fa-user"></i>STUDENTS</a></li>
+                <li><a href="../API/WebAppAPIs/SignOut.php"><i class="fa fa-server"></i>CLASSES</a></li>
+                <li><a href="../API/WebAppAPIs/SignOut.php"><i class="fa fa-book"></i>COURSES</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    </header>
+    </body>
+{% endblock %}

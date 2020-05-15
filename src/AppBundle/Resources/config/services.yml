@@ -1,0 +1,21 @@
+services:
+    app.admin.school_class:
+        class: AppBundle\Admin\SchoolClassAdmin
+        arguments: [~, AppBundle\Entity\SchoolClass, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: SchoolClass }
+        public: true
+
+    app.admin.student:
+        class: AppBundle\Admin\StudentAdmin
+        arguments: [~, AppBundle\Entity\Student, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Student }
+        public: true
+
+    app.admin.course:
+        class: AppBundle\Admin\CourseAdmin
+        arguments: [~, AppBundle\Entity\Course, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Course }
+        public: true
